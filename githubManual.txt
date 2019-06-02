@@ -1,0 +1,20 @@
+创建SSh Key：
+ssh-keygen -t rsa -C "youEmailAddress@example.com"
+顺利创建 .ssh 目录和下面的 id_rsa 和 id_rsa_pub 文件，前者是私钥，后者是公钥。github里放公钥即可
+========================================
+先有本地仓库，再为此本地仓库添加一个远程仓库
+========================================
+添加远程库：
+git remote add origin git@github.com:yourRepositoryAddress
+origin是远程库的名字，可以自己取名，默认origin
+
+推送到远程库：
+第一次推送
+git push -u origin master
+之后推送
+git push origin master
+========================================
+先有远程仓库，再在本地创建一个克隆仓库
+========================================
+克隆仓库
+git clone git@github.com:yourRepositoryAddress

@@ -1,0 +1,37 @@
+命令行基本命令：
+显示当前目录		pwd
+切换目录			cd
+创建新文件夹		mkdir test
+显示当前目录下的文件	ls		参数 -a所有	-h包括隐藏
+删除文件			rm test.txt
+========================================
+术语：
+整个文件夹是一个	工作区
+.git文件夹是一个	版本库
+版本库里有一个	暂存区
+还有该项目的	各版本分支（自动创建默认的master主分支）（该分支由HEAD指针指向）
+========================================
+使用git的过程：
+使用add将文件添加到暂存区
+使用commit提交更改到HEAD指向的分支（默认是master）
+========================================
+基本操作：
+在当前文件夹创建新仓库	git init
+添加到暂存区		git add test.txt
+提交暂存区到当前分支	git commit -m "put your introductions here"
+查看仓库状态		git status
+查看当前版本所做的改动	git diff
+查看提交日志		git log
+查看历史命令		git reflog
+退回到之前的版本		git reset --hard HEAD^	或者	git reset --hard HEAD~1	或者	git reset --hard last_commit_id
+用版本库替换工作区		git checkout -- test.txt（未添加到暂存区）（回到最近一次的状态）
+将文件从暂存区撤销		git reset HEAD test.txt
+删除版本库中的文件		git rm test.txt
+========================================
+分支操作：
+删除分支			git branch -d dev（删除dev分支）
+查看当前分支		git branch
+创建并切换到新分支		git checkout -b dev（创建dev分支，HEAD将自动指向dev）
+切换分支			git checkout master（这里是切换到主分支master）
+合并分支			git merge dev（将dev分支的工作成果合并到当前分支上）
+（当发生合并冲突时，使用git status查看冲突内容）

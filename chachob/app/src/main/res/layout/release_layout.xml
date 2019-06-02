@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/release_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="任务发布"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/edit_release_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请描述任务将在那里进行"
+        android:maxLines="2"
+        />
+
+    <EditText
+        android:id="@+id/edit_release_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请描述任务的具体信息"
+        android:maxLines="10"
+        />
+
+    <EditText
+        android:id="@+id/edit_release_payback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请描述任务的回报"
+        android:maxLines="2"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="立即发布"
+            />
+    </RelativeLayout>
+</LinearLayout>
